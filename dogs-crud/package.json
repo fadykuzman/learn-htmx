@@ -1,7 +1,7 @@
 {
   "name": "dogs-crud",
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "dev": "bun run --watch src/server.tsx"
   },
   "dependencies": {
     "hono": "^4.6.17"
