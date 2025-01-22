@@ -6,7 +6,7 @@ const app = new Hono()
 app.use('/*', serveStatic({root: './public'}));
 
 app.get('/version', (c: Context) => {
-	return c.text(Bun.version)
+	return c.html(<div id="bun">{Bun.version}</div>)
 });
 
 export default app
