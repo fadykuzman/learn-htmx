@@ -8,9 +8,9 @@
 	    <h1>Dogs</h1>	
 		<form
 		    hx-post="/dog"
-		    hx-disabled-elt="#add-button"
-		    hx-traget="table tbody"
-		    hx-swap="afterbegin"
+		    hx-disabled-elt="#add-btn"
+		    hx-target="table tbody" 
+			hx-swap="afterbegin" 
 			hx-on:htmx:after-request="this.reset()"
 		>
 		    <div>
@@ -23,5 +23,14 @@
 			</div>
 			<button id="add-btn">Add</button>
 		</form>
+		<table hx-trigger="revealed" hx-get="/table-rows" hx-target="tbody">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Breed</th>
+				</tr>
+			</thead>
+		    <tbody></tbody>	
+		</table>
 	</body>
 </html>
