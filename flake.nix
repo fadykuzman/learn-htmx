@@ -46,6 +46,10 @@
                     install.enable = true;
                   };
                 };
+                rust = {
+                  enable = true;
+                  toolchain.enable = true;
+                };
               };
 
               enterShell = ''
